@@ -1,0 +1,27 @@
+[alias]
+  ca = commit -a
+  ci = commit --interactive
+  co = checkout
+  st = !git status && echo && (git l origin..HEAD 2> /dev/null) || (git l $USER/master..HEAD 2> /dev/null)
+  ls = ls-files --stage --abbrev
+  up = remote update
+  info = show-ref -h
+  d = whatchanged -p
+  l = log --graph --oneline --all --decorate
+  lg = log -p
+  ll = log --color --graph --pretty=format:'%Cyellow%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  b = branch -av
+  t = tag -n
+  who = shortlog -s --
+  graph = log --graph --oneline --all --decorate
+  f = !git fetch --all --tags --verbose && git remote --verbose update --prune
+  r = rebase -i HEAD~10
+  stat = log --oneline --shortstat
+  track = checkout --track -b
+  auth = !git log --format='%aN <%aE>' | awk '{arr[$0]++} END{for (i in arr){print arr[i], i}}' | sort -rn
+
+[core]
+[color]
+  ui = true
+[push]
+  default = current  # push current branch rather than ALL matching branches
