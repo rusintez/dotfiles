@@ -31,3 +31,6 @@ j() {
 
 export GOPATH=$HOME/gg
 export PATH=$GOPATH/bin:$PATH
+
+export NPMPATH=$HOME/npm
+export PATH=$NPMPATH/bin:$PATH
