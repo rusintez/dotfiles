@@ -9,7 +9,7 @@
   d = whatchanged -p
   l = log --graph --oneline --all --decorate
   lg = log -p
-  ll = log --color --graph --pretty=format:'%Cyellow%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  ll = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
   b = branch -av
   t = tag -n
   who = shortlog -s --
